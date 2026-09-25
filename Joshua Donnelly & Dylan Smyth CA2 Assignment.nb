@@ -1,0 +1,1051 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     45637,       1043]
+NotebookOptionsPosition[     35976,        875]
+NotebookOutlinePosition[     38777,        944]
+CellTagsIndexPosition[     38699,        939]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["", "SlideShowNavigationBar", "FirstSlide",
+ CellTags->
+  "SlideShowHeader",ExpressionUUID->"c3ecb036-baa0-4ba9-95ea-67b58639db75"],
+
+Cell[CellGroupData[{
+
+Cell["AI - CA2 - Assignment - 30% of overall mark", "Chapter",
+ CellChangeTimes->{{3.8087315045049148`*^9, 3.8087315645713215`*^9}, {
+   3.8087316045702915`*^9, 3.808731858157686*^9}, {3.8087319050413237`*^9, 
+   3.8087321197403426`*^9}, {3.80873233631911*^9, 3.8087323425703936`*^9}, 
+   3.8087324263782716`*^9, {3.8088266192044134`*^9, 3.8088266210129046`*^9}, {
+   3.8406232470677896`*^9, 3.840623267607809*^9}, {3.8406238598076544`*^9, 
+   3.84062387145358*^9}},
+ FontColor->GrayLevel[
+  0],ExpressionUUID->"c3ccad56-a13d-458a-8207-c25d1b06dbf3"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "In this CA you are ",
+ StyleBox["required",
+  FontVariations->{"Underline"->True}],
+ " to work in a team of two.\nYou should jointly answer all the questions \
+(not divide them between you! ).\n  \nMake a copy of this file and rename it \
+to be your names. \n\nFill your answer to each question (and how you found \
+that answer) in the place provided directly underneath that question \
+(otherwise it will not be marked).\n\nSave this file and upload it to moodle \
+(only ",
+ StyleBox["one student",
+  FontVariations->{"Underline"->True}],
+ " per team should upload it).\n    \nBoth students will be given the same \
+mark. \n\nClearly highlight any work that was ",
+ StyleBox["not directly created",
+  FontVariations->{"Underline"->True}],
+ " by the team e.g. use of ChatGPT."
+}], "Section",
+ CellChangeTimes->{{3.8087323460271473`*^9, 3.8087323526923227`*^9}, {
+  3.8087323929775915`*^9, 3.8087324545452776`*^9}, {3.8087326485502157`*^9, 
+  3.808732668298456*^9}, {3.808813944723789*^9, 3.808814042062484*^9}, {
+  3.808826657113576*^9, 3.8088267547301073`*^9}, {3.816609165291444*^9, 
+  3.81660917807452*^9}, {3.8166092084748383`*^9, 3.816609263531391*^9}, {
+  3.84062329298606*^9, 3.8406232982430706`*^9}, {3.840623374290868*^9, 
+  3.840623384239226*^9}, {3.8406819217339883`*^9, 3.840681939136093*^9}, {
+  3.9036860101402035`*^9, 3.903686093963582*^9}},
+ FontColor->GrayLevel[
+  0],ExpressionUUID->"1f26cb97-b2cf-4766-bd76-ee25f39bec23"],
+
+Cell["\<\
+
+Name 1:
+Group (e.g. SD4a):
+
+Name 2:
+Group (e.g. GD4a):\
+\>", "Subsection",
+ CellChangeTimes->{{3.8087317494111176`*^9, 3.8087317567874727`*^9}, {
+   3.808732129852306*^9, 3.808732165976639*^9}, {3.8087325331783895`*^9, 
+   3.808732567258206*^9}, 3.8087326106465783`*^9, {3.8406233272397127`*^9, 
+   3.840623336271964*^9}},
+ FontColor->RGBColor[
+  0., 0., 1.],ExpressionUUID->"2befb1a6-84a8-4f1d-bcfd-3ecade2c63e5"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "SlideShowNavigationBar",
+ CellTags->
+  "SlideShowHeader",ExpressionUUID->"11336e2c-dc9b-4660-aace-ea635696dd61"],
+
+Cell[TextData[{
+ StyleBox["  Part A: Neural Networks",
+  FontColor->RGBColor[0., 0.5019607843137255, 0.7529411764705882]],
+ " [100 marks]"
+}], "Title",
+ CellChangeTimes->{{3.8406239001079025`*^9, 3.840623923160287*^9}, {
+  3.840623953596376*^9, 3.8406239764268804`*^9}, {3.840624162251109*^9, 
+  3.840624182783888*^9}, {3.8426937963579817`*^9, 3.8426937964369497`*^9}, {
+  3.8474364670283175`*^9, 3.8474364703413086`*^9}, {3.84743675180826*^9, 
+  3.847436753310439*^9}, {3.847441861958575*^9, 3.84744186204679*^9}, {
+  3.903681663536993*^9, 3.903681663843732*^9}, {3.903685964238949*^9, 
+  3.903685964637989*^9}, {3.903686315149597*^9, 
+  3.903686315502321*^9}},ExpressionUUID->"b4e5e857-a858-487c-9039-\
+fed57a0c9639"],
+
+Cell[TextData[{
+ StyleBox["Question overview:",
+  FontWeight->"Bold",
+  FontColor->RGBColor[0., 0., 1.]],
+ "\nUse a Neural Network to solve a CLASSIFICATION problem of your choosing.\n\
+\n",
+ StyleBox["Note: I am looking for you to show me that you can take a problem \
+from the beginning to the end.",
+  FontWeight->"Bold",
+  FontColor->GrayLevel[0]],
+ "\n"
+}], "Text",
+ CellChangeTimes->{{3.8405321901794205`*^9, 3.8405321901808443`*^9}, {
+   3.8405322507701707`*^9, 3.8405323569647264`*^9}, {3.8406071234963913`*^9, 
+   3.8406071248007536`*^9}, {3.8406072604677973`*^9, 
+   3.8406073328845797`*^9}, {3.8406074116698065`*^9, 
+   3.8406074229471273`*^9}, {3.84060751922021*^9, 3.840607542313242*^9}, {
+   3.8406075959997315`*^9, 3.840607629351475*^9}, {3.840607717223824*^9, 
+   3.840607721525015*^9}, {3.840610759523672*^9, 3.840610821531867*^9}, {
+   3.84061085607677*^9, 3.840610857967925*^9}, {3.8406109016184106`*^9, 
+   3.840610954958736*^9}, {3.8406118764037886`*^9, 3.8406119235791254`*^9}, {
+   3.840611962199874*^9, 3.8406120164727287`*^9}, {3.8406188289286394`*^9, 
+   3.840618830912636*^9}, {3.8406189673300915`*^9, 3.840619005649277*^9}, {
+   3.840619039442081*^9, 3.840619121699952*^9}, {3.840619165417841*^9, 
+   3.8406191987289777`*^9}, {3.840619249570969*^9, 3.8406192803542876`*^9}, 
+   3.8406194854865685`*^9, {3.840619683434723*^9, 3.8406196928749704`*^9}, {
+   3.840620451264888*^9, 3.840620514982915*^9}, {3.840620574355143*^9, 
+   3.8406205828431797`*^9}, {3.8406206244117484`*^9, 3.8406208002155914`*^9}, 
+   3.8406246956845818`*^9, {3.8406251601102104`*^9, 3.84062522997325*^9}, 
+   3.8406254323849144`*^9},ExpressionUUID->"70020fa7-b1d5-4909-a90e-\
+9cfada77064e"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Question 1.\t",
+ StyleBox["[5 marks]",
+  FontWeight->"Bold",
+  FontColor:>Dynamic[
+    CurrentValue[{StyleHints, "ColorSet", "Display1"}]]]
+}], "Subsection",
+ CellChangeTimes->{{3.8087334418183565`*^9, 3.8087334484885187`*^9}, {
+   3.840623522414098*^9, 3.8406235285115347`*^9}, {3.840623567291004*^9, 
+   3.8406235679043617`*^9}, {3.840624727877919*^9, 3.840624729378924*^9}, {
+   3.842694450469535*^9, 3.842694476779484*^9}, {3.847437004427983*^9, 
+   3.8474370044969645`*^9}, {3.847441906176649*^9, 3.84744190623387*^9}, {
+   3.9036859775154505`*^9, 3.9036859886022816`*^9}, 3.903686322735242*^9, 
+   3.9036863572936797`*^9, {3.904632240136218*^9, 
+   3.9046322402642183`*^9}},ExpressionUUID->"213c3f72-a9d2-4b1d-beb9-\
+797e9f934166"],
+
+Cell[TextData[{
+ "Show a sample of the data used and state how many examples there are in \
+total (show 10 records).\nAlso, state either where it was found (if using a \
+dataset found on the web) or how it was generated (if you are using your own \
+data).\n",
+ StyleBox["Answer:",
+  FontWeight->"Bold",
+  FontColor->RGBColor[0., 0., 1.]]
+}], "Text",
+ CellChangeTimes->{{3.840607725384644*^9, 3.840607760872209*^9}, {
+   3.8406078022778606`*^9, 3.8406078102046776`*^9}, {3.8406106963508224`*^9, 
+   3.8406107088405824`*^9}, {3.8406109923753786`*^9, 3.840611013098338*^9}, {
+   3.8406110693175955`*^9, 3.8406111194349594`*^9}, {3.840619531338698*^9, 
+   3.8406196000348096`*^9}, {3.840620019754721*^9, 3.8406200231767826`*^9}, {
+   3.840620153516815*^9, 3.8406201535701885`*^9}, {3.84062096077177*^9, 
+   3.840620982907363*^9}, {3.840621944987389*^9, 3.8406219678998766`*^9}, {
+   3.840622303353545*^9, 3.8406223553882604`*^9}, 3.840622556881044*^9, {
+   3.8406248249090548`*^9, 3.8406248255704236`*^9}, 3.8406252575298567`*^9, {
+   3.9036811269448843`*^9, 3.9036812029747086`*^9}, {3.903681308226006*^9, 
+   3.9036813090585575`*^9}, {3.9993196625746403`*^9, 
+   3.9993196739257393`*^9}},ExpressionUUID->"49ded190-9585-4ec5-a8bc-\
+2781348d9117"],
+
+Cell["\<\
+
+\
+\>", "Text",
+ CellChangeTimes->{{3.8406077657661633`*^9, 3.8406077988842287`*^9}, {
+  3.8406248407328467`*^9, 
+  3.8406248433065586`*^9}},ExpressionUUID->"0ea8b630-bf97-450f-8062-\
+332d9cd49426"],
+
+Cell["Code used to produce answer:", "Text",
+ CellChangeTimes->{{3.8406212671583977`*^9, 3.840621294907153*^9}, {
+  3.840623759650882*^9, 3.8406237597957306`*^9}},
+ FontWeight->"Bold",
+ FontColor->RGBColor[
+  0., 0., 1.],ExpressionUUID->"5d9cb034-c48d-4308-835b-c8ed06677baf"],
+
+Cell[BoxData["\[IndentingNewLine]"], "Input",
+ CellChangeTimes->{
+  3.8406212739318576`*^9},ExpressionUUID->"cf99c650-ad89-4cf8-b184-\
+ce2c2c210372"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Question 2.\t",
+ StyleBox["[35 marks]",
+  FontWeight->"Bold",
+  FontColor:>Dynamic[
+    CurrentValue[{StyleHints, "ColorSet", "Display1"}]]]
+}], "Subsection",
+ CellChangeTimes->{{3.8087334418183565`*^9, 3.8087334484885187`*^9}, {
+  3.840623522414098*^9, 3.8406235285115347`*^9}, {3.840623567291004*^9, 
+  3.8406235679043617`*^9}, {3.840624727877919*^9, 3.840624729378924*^9}, {
+  3.8406252792451124`*^9, 3.8406252793186836`*^9}, {3.842694493002457*^9, 
+  3.8426944999334984`*^9}, {3.8474369198771896`*^9, 3.847436920561673*^9}, {
+  3.847437007932028*^9, 3.847437040145769*^9}, {3.847441884548001*^9, 
+  3.8474419130314474`*^9}, {3.9036863316441236`*^9, 3.903686331742153*^9}, {
+  3.903686377824108*^9, 3.9036863784330087`*^9}, {3.904632204027754*^9, 
+  3.9046322061530333`*^9}, {3.9046322429046144`*^9, 
+  3.9046322430001993`*^9}},ExpressionUUID->"5ea9ab58-14cd-47b4-ab37-\
+02284375969b"],
+
+Cell[TextData[{
+ "State the features you extracted/generated from the data and how they were \
+calculated as well as how you split the data up prior to training the Neural \
+Network.\ni.e. display a sample of 10 records from each of the datasets (and \
+state how many examples there are in total) you used in generating the Neural \
+Network .\n",
+ StyleBox["Answer:",
+  FontWeight->"Bold",
+  FontColor->RGBColor[0., 0., 1.]]
+}], "Text",
+ CellChangeTimes->{{3.840607725384644*^9, 3.840607760872209*^9}, {
+   3.8406078022778606`*^9, 3.8406078102046776`*^9}, {3.8406106963508224`*^9, 
+   3.8406107088405824`*^9}, {3.8406109923753786`*^9, 3.840611013098338*^9}, {
+   3.8406110693175955`*^9, 3.8406111194349594`*^9}, {3.840619531338698*^9, 
+   3.8406196000348096`*^9}, {3.840620019754721*^9, 3.8406200231767826`*^9}, {
+   3.840620153516815*^9, 3.8406201535701885`*^9}, {3.84062096077177*^9, 
+   3.840620982907363*^9}, {3.840621944987389*^9, 3.8406219678998766`*^9}, {
+   3.840622303353545*^9, 3.8406223553882604`*^9}, 3.840622556881044*^9, {
+   3.8406248249090548`*^9, 3.8406248255704236`*^9}, 3.8406252575298567`*^9, {
+   3.840625307740189*^9, 3.84062530848371*^9}, {3.8474369250864387`*^9, 
+   3.847436950420021*^9}, {3.8474371145929317`*^9, 3.847437147374682*^9}, {
+   3.9036812510575633`*^9, 3.9036812574270697`*^9}, {3.9036812971883245`*^9, 
+   3.903681370783835*^9}, {3.999319750848702*^9, 
+   3.9993197596303*^9}},ExpressionUUID->"64e92d9d-0637-45d2-88fc-\
+417951aaebf0"],
+
+Cell["\<\
+
+\
+\>", "Text",
+ CellChangeTimes->{{3.8406077657661633`*^9, 3.8406077988842287`*^9}, {
+  3.8406248407328467`*^9, 
+  3.8406248433065586`*^9}},ExpressionUUID->"47021a2d-2a3e-484e-bd10-\
+ff8ce41848a7"],
+
+Cell["Code used to produce answer:", "Text",
+ CellChangeTimes->{{3.8406212671583977`*^9, 3.840621294907153*^9}, {
+  3.840623759650882*^9, 3.8406237597957306`*^9}},
+ FontWeight->"Bold",
+ FontColor->RGBColor[
+  0., 0., 1.],ExpressionUUID->"0b16dead-e230-4422-9a18-114d3ce94eed"],
+
+Cell[BoxData["\[IndentingNewLine]"], "Input",
+ CellChangeTimes->{
+  3.8406212739318576`*^9},ExpressionUUID->"77bc48bf-8d88-48dc-b03e-\
+a30be7eca813"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Question 3.\t",
+ StyleBox["[60 marks]",
+  FontWeight->"Bold",
+  FontColor:>Dynamic[
+    CurrentValue[{StyleHints, "ColorSet", "Display1"}]]]
+}], "Subsection",
+ CellChangeTimes->{{3.8087334418183565`*^9, 3.8087334484885187`*^9}, {
+  3.840623522414098*^9, 3.8406235285115347`*^9}, {3.840623567291004*^9, 
+  3.8406235679043617`*^9}, {3.840624727877919*^9, 3.840624729378924*^9}, {
+  3.840625284426195*^9, 3.8406252962489157`*^9}, {3.8406253456626596`*^9, 
+  3.8406253579234314`*^9}, {3.842694534951228*^9, 3.8426945351996713`*^9}, {
+  3.8474369736800165`*^9, 3.8474369737419834`*^9}, {3.847441879981701*^9, 
+  3.847441880043738*^9}, {3.9036863391018376`*^9, 3.903686339819152*^9}, {
+  3.9036863831051826`*^9, 3.9036863838518305`*^9}, {3.9046322087762156`*^9, 
+  3.9046322091783195`*^9}},ExpressionUUID->"d6bd9257-a808-4631-92b0-\
+a4021f648644"],
+
+Cell[TextData[{
+ "Create a number of Neural Networks and state how good the best one is \
+(justify your answer).\n",
+ StyleBox["Answer:",
+  FontWeight->"Bold",
+  FontColor->RGBColor[0., 0., 1.]]
+}], "Text",
+ CellChangeTimes->{{3.840607725384644*^9, 3.840607760872209*^9}, {
+   3.8406078022778606`*^9, 3.8406078102046776`*^9}, {3.8406106963508224`*^9, 
+   3.8406107088405824`*^9}, {3.8406109923753786`*^9, 3.840611013098338*^9}, {
+   3.8406110693175955`*^9, 3.8406111194349594`*^9}, {3.840619531338698*^9, 
+   3.8406196000348096`*^9}, {3.840620019754721*^9, 3.8406200231767826`*^9}, {
+   3.840620153516815*^9, 3.8406201535701885`*^9}, {3.84062096077177*^9, 
+   3.840620982907363*^9}, {3.840621944987389*^9, 3.8406219678998766`*^9}, {
+   3.840622303353545*^9, 3.8406223553882604`*^9}, 3.840622556881044*^9, {
+   3.8406248249090548`*^9, 3.8406248255704236`*^9}, 3.8406252575298567`*^9, {
+   3.840625317360176*^9, 3.8406253189368353`*^9}, {3.8406254066434803`*^9, 
+   3.840625409575193*^9}, {3.8426945668509054`*^9, 3.842694576196881*^9}, {
+   3.9036814018732476`*^9, 3.9036814558905735`*^9}, {3.9036815438739133`*^9, 
+   3.9036815702872095`*^9}},ExpressionUUID->"3ccfa633-1afe-4f6a-98cc-\
+d8c53249db40"],
+
+Cell["\<\
+
+\
+\>", "Text",
+ CellChangeTimes->{{3.8406077657661633`*^9, 3.8406077988842287`*^9}, {
+  3.8406248407328467`*^9, 
+  3.8406248433065586`*^9}},ExpressionUUID->"b1fb2533-13f4-42a4-a1f0-\
+c00bf6fea910"],
+
+Cell["Code used to produce answer:", "Text",
+ CellChangeTimes->{{3.8406212671583977`*^9, 3.840621294907153*^9}, {
+  3.840623759650882*^9, 3.8406237597957306`*^9}},
+ FontWeight->"Bold",
+ FontColor->RGBColor[
+  0., 0., 1.],ExpressionUUID->"49ebd0b9-1677-402b-b032-27e1b627650b"],
+
+Cell[BoxData["\[IndentingNewLine]"], "Input",
+ CellChangeTimes->{
+  3.8406212739318576`*^9},ExpressionUUID->"6e71f9a5-fa75-4f87-bb58-\
+eccde611fe58"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ StyleBox["  Part B: Regression",
+  FontColor->RGBColor[0., 0.5019607843137255, 0.7529411764705882]],
+ " [50 marks]"
+}], "Title",
+ CellChangeTimes->{{3.8406239001079025`*^9, 3.840623923160287*^9}, {
+  3.840623953596376*^9, 3.8406239764268804`*^9}, {3.84743670507271*^9, 
+  3.8474367056213994`*^9}, {3.8474384684493136`*^9, 3.8474384685337315`*^9}, {
+  3.9036816748976727`*^9, 3.903681675422818*^9}, {3.90368628742248*^9, 
+  3.903686287550967*^9}, {3.9036864301239967`*^9, 
+  3.903686431549564*^9}},ExpressionUUID->"557ee615-341a-4e65-bd36-\
+acfa7921e665"],
+
+Cell[TextData[{
+ StyleBox["Data source & information:",
+  FontWeight->"Bold",
+  FontColor->RGBColor[0., 0., 1.]],
+ "\nhttps://www.kaggle.com/lespin/house-prices-dataset"
+}], "Text",
+ CellChangeTimes->{{3.8406071850962543`*^9, 3.8406072554331727`*^9}, 
+   3.840619410821807*^9},ExpressionUUID->"5541f22e-6062-4e5e-97cb-\
+15cd82027cbe"],
+
+Cell[TextData[{
+ StyleBox["\nQuestion overview:",
+  FontWeight->"Bold",
+  FontColor->RGBColor[0., 0., 1.]],
+ "\nUse Regression (and Gradient Decent) to predict the price of a new house \
+that has come on to the market . \nWe have prior data (train.csv) which can \
+be found at  https://www.kaggle.com/lespin/house-prices-dataset).\nMake a \
+prediction using two different Models : one linear and one non-linear \
+(include only one!).\n\n",
+ StyleBox["Note: Included in what I am looking for you to show me that you \
+understand:\n1. How to use the code I gave you that models a linear function \
+and its cost function\n2. How to use the code I gave you to implements \
+Gradient Decent on a linear model\n3. How to take the raw data and to turn \
+them into suitable features for linear regression\n4. How to split data up so \
+that you produce not only a model but an idea of how useful it is.",
+  FontWeight->"Bold",
+  FontColor->GrayLevel[0]],
+ "\n"
+}], "Text",
+ CellChangeTimes->{{3.8405321901794205`*^9, 3.8405321901808443`*^9}, {
+   3.8405322507701707`*^9, 3.8405323569647264`*^9}, {3.8406071234963913`*^9, 
+   3.8406071248007536`*^9}, {3.8406072604677973`*^9, 
+   3.8406073328845797`*^9}, {3.8406074116698065`*^9, 
+   3.8406074229471273`*^9}, {3.84060751922021*^9, 3.840607542313242*^9}, {
+   3.8406075959997315`*^9, 3.840607629351475*^9}, {3.840607717223824*^9, 
+   3.840607721525015*^9}, {3.840610759523672*^9, 3.840610821531867*^9}, {
+   3.84061085607677*^9, 3.840610857967925*^9}, {3.8406109016184106`*^9, 
+   3.840610954958736*^9}, {3.8406118764037886`*^9, 3.8406119235791254`*^9}, {
+   3.840611962199874*^9, 3.8406120164727287`*^9}, {3.8406188289286394`*^9, 
+   3.840618830912636*^9}, {3.8406189673300915`*^9, 3.840619005649277*^9}, {
+   3.840619039442081*^9, 3.840619121699952*^9}, {3.840619165417841*^9, 
+   3.8406191987289777`*^9}, {3.840619249570969*^9, 3.8406192803542876`*^9}, 
+   3.8406194854865685`*^9, {3.840619683434723*^9, 3.8406196928749704`*^9}, {
+   3.8406242513390875`*^9, 3.840624269854103*^9}, 3.8406247786185117`*^9, {
+   3.874405246111614*^9, 3.8744052616628714`*^9}, {3.9036862259834595`*^9, 
+   3.903686227502184*^9}, {3.9412710882659664`*^9, 
+   3.941271211482106*^9}},ExpressionUUID->"c3453995-76c3-4e60-a7e1-\
+b681e1eda9f7"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Question 1.\t",
+ StyleBox["[15 marks]",
+  FontWeight->"Bold",
+  FontColor:>Dynamic[
+    CurrentValue[{StyleHints, "ColorSet", "Display1"}]]]
+}], "Subsection",
+ CellChangeTimes->{{3.8087334418183565`*^9, 3.8087334484885187`*^9}, {
+   3.840623522414098*^9, 3.8406235285115347`*^9}, {3.840623567291004*^9, 
+   3.8406235679043617`*^9}, {3.847436288178302*^9, 3.847436288256444*^9}, 
+   3.8474384740254345`*^9, {3.903686461712163*^9, 3.9036864618028727`*^9}, {
+   3.9036864971187716`*^9, 
+   3.9036864991199007`*^9}},ExpressionUUID->"c8d846ef-06ab-4158-ba71-\
+8493883a6562"],
+
+Cell[TextData[{
+ "For your linear model, state how you created the features you \
+extracted/generated and how they were calculated.\nAlso, state how you split \
+the data up for your models.\ni.e. display a sample of the data you used for \
+your models and how it was generated (you may not be using all features in \
+both models).\n",
+ StyleBox["Answer:",
+  FontWeight->"Bold",
+  FontColor->RGBColor[0., 0., 1.]]
+}], "Text",
+ CellChangeTimes->{{3.840607725384644*^9, 3.840607760872209*^9}, {
+   3.8406078022778606`*^9, 3.8406078102046776`*^9}, {3.8406106963508224`*^9, 
+   3.8406107088405824`*^9}, {3.8406109923753786`*^9, 3.840611013098338*^9}, {
+   3.8406110693175955`*^9, 3.8406111194349594`*^9}, {3.840619531338698*^9, 
+   3.8406196000348096`*^9}, {3.840620019754721*^9, 3.8406200231767826`*^9}, {
+   3.840620153516815*^9, 3.8406201535701885`*^9}, {3.840623483957057*^9, 
+   3.8406235347469196`*^9}, 3.840624054372602*^9, {3.847435872938201*^9, 
+   3.847435879594899*^9}, {3.8474359475579014`*^9, 3.8474360591044674`*^9}, {
+   3.8474361740509377`*^9, 3.8474361776059756`*^9}, {3.8782095795412474`*^9, 
+   3.8782096051319947`*^9}, {3.9681335546263337`*^9, 
+   3.9681335601243925`*^9}},ExpressionUUID->"a9464fb5-ad04-4829-9532-\
+d294afe832c4"],
+
+Cell["\<\
+
+\
+\>", "Text",
+ CellChangeTimes->{{3.8406077657661633`*^9, 
+  3.8406077988842287`*^9}},ExpressionUUID->"44107e52-a06b-4860-a993-\
+377a7a919e2e"],
+
+Cell["Code used to produce answer:", "Text",
+ CellChangeTimes->{{3.8406212671583977`*^9, 3.840621294907153*^9}, {
+  3.840623756059304*^9, 3.840623756233817*^9}},
+ FontWeight->"Bold",
+ FontColor->RGBColor[
+  0., 0., 1.],ExpressionUUID->"0f04cc29-7d41-4258-98d1-3db09eba00fb"],
+
+Cell[BoxData["\[IndentingNewLine]"], "Input",
+ CellChangeTimes->{
+  3.8406212739318576`*^9},ExpressionUUID->"9c603519-e05d-41b6-99f3-\
+edd4fea4d55c"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Question 2.\t",
+ StyleBox["[10 marks]",
+  FontWeight->"Bold",
+  FontColor:>Dynamic[
+    CurrentValue[{StyleHints, "ColorSet", "Display1"}]]]
+}], "Subsection",
+ CellChangeTimes->{{3.8087334418183565`*^9, 3.8087334484885187`*^9}, {
+   3.840623522414098*^9, 3.8406235933922443`*^9}, {3.847436109074675*^9, 
+   3.847436109144519*^9}, 3.847438477876051*^9, {3.9036864675012693`*^9, 
+   3.9036864676160116`*^9}, 3.9036865670725236`*^9, {3.9681336165422163`*^9, 
+   3.968133617262168*^9}},ExpressionUUID->"13e2a78b-cda4-47d4-8d7d-\
+3539878ca38c"],
+
+Cell[TextData[{
+ "State in detail, the linear regression model used, the cost function \
+associated with it and the values of the parameters found by the Gradient \
+Decent method.\n",
+ StyleBox["Answer:",
+  FontWeight->"Bold",
+  FontColor->RGBColor[0., 0., 1.]]
+}], "Text",
+ CellChangeTimes->{{3.8406077677898483`*^9, 3.8406077805787115`*^9}, {
+   3.840607817148863*^9, 3.8406078233314943`*^9}, {3.840610140231086*^9, 
+   3.8406101687976065`*^9}, {3.840611410450673*^9, 3.8406114111372795`*^9}, {
+   3.8406118106191096`*^9, 3.8406118157377205`*^9}, {3.840619757198535*^9, 
+   3.840619781346617*^9}, {3.84062003764408*^9, 3.840620044774067*^9}, {
+   3.840620162977298*^9, 3.840620163057195*^9}, {3.840621198484002*^9, 
+   3.8406212288327556`*^9}, {3.840623598025297*^9, 3.8406235983732743`*^9}, 
+   3.840623693882882*^9, {3.90368616340644*^9, 3.9036861668461504`*^9}, {
+   3.9681336344822006`*^9, 
+   3.9681336525041304`*^9}},ExpressionUUID->"da25c9ca-6778-4df5-837f-\
+5ace775e23bc"],
+
+Cell["\<\
+
+\
+\>", "Text",
+ CellChangeTimes->{{3.8406077657661633`*^9, 
+  3.8406077988842287`*^9}},ExpressionUUID->"20de9576-d17c-4273-90ea-\
+9210aeb5c5e2"],
+
+Cell["Code used to produce answer:", "Text",
+ CellChangeTimes->{{3.8406212671583977`*^9, 3.840621294907153*^9}, {
+  3.840623759650882*^9, 3.8406237597957306`*^9}},
+ FontWeight->"Bold",
+ FontColor->RGBColor[
+  0., 0., 1.],ExpressionUUID->"d28d6f27-233a-4587-8261-91bcbd635a6e"],
+
+Cell[BoxData["\[IndentingNewLine]"], "Input",
+ CellChangeTimes->{
+  3.8406212739318576`*^9},ExpressionUUID->"a7b8f52f-b50e-4933-8e5a-\
+a60ef2f859f1"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Question 3.\t",
+ StyleBox["[2 marks]",
+  FontWeight->"Bold",
+  FontColor:>Dynamic[
+    CurrentValue[{StyleHints, "ColorSet", "Display1"}]]]
+}], "Subsection",
+ CellChangeTimes->{{3.8087334418183565`*^9, 3.8087334484885187`*^9}, {
+   3.840623522414098*^9, 3.8406235750202866`*^9}, {3.840623606360448*^9, 
+   3.8406236093370066`*^9}, {3.847436254202606*^9, 3.8474362542687902`*^9}, 
+   3.8474384817359176`*^9, 
+   3.9036864759321814`*^9},ExpressionUUID->"78817d5b-be37-4844-92a1-\
+3aff85e2da60"],
+
+Cell[TextData[{
+ "Using Linear Regression predict the house prices for the houses with IDs \
+from 1461 to 2919 (found in test.csv)\nsample answer: { {id, price}, {1461, \
+239344.34}, {1462, 94383.35},...{2919, 489033.44}}\n",
+ StyleBox["Answer:",
+  FontWeight->"Bold",
+  FontColor->RGBColor[0., 0., 1.]]
+}], "Text",
+ CellChangeTimes->{{3.8406077677898483`*^9, 3.8406077805787115`*^9}, {
+   3.840607817148863*^9, 3.8406078375778275`*^9}, {3.840610069305292*^9, 
+   3.840610134078578*^9}, {3.8406103445294485`*^9, 3.8406104294046173`*^9}, {
+   3.8406114067682934`*^9, 3.840611406843758*^9}, {3.8406197539130535`*^9, 
+   3.840619754223263*^9}, {3.8406200491000996`*^9, 3.840620050676186*^9}, {
+   3.8406201694596577`*^9, 3.8406201750266476`*^9}, {3.84062361295474*^9, 
+   3.8406236132858353`*^9}, 
+   3.8406236961390038`*^9},ExpressionUUID->"1c085178-a7a0-4047-8956-\
+0a0a38ae4141"],
+
+Cell[BoxData["\[IndentingNewLine]"], "Input",
+ CellChangeTimes->{
+  3.8406104511165066`*^9},ExpressionUUID->"5b5d3a00-5e7b-4b90-ad3c-\
+e5d910030b42"],
+
+Cell["Code used to produce answer:", "Text",
+ CellChangeTimes->{{3.8406212671583977`*^9, 3.840621294907153*^9}, {
+  3.840623759650882*^9, 3.8406237597957306`*^9}},
+ FontWeight->"Bold",
+ FontColor->RGBColor[
+  0., 0., 1.],ExpressionUUID->"934ab32c-b12a-409e-95e2-823ecf291d91"],
+
+Cell[BoxData["\[IndentingNewLine]"], "Input",
+ CellChangeTimes->{
+  3.8406212739318576`*^9},ExpressionUUID->"643be401-fcf4-4e1d-a515-\
+6e03f3a33f42"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Question 4.\t",
+ StyleBox["[5 marks]",
+  FontWeight->"Bold",
+  FontColor:>Dynamic[
+    CurrentValue[{StyleHints, "ColorSet", "Display1"}]]]
+}], "Subsection",
+ CellChangeTimes->{{3.8087334418183565`*^9, 3.8087334484885187`*^9}, {
+   3.840623522414098*^9, 3.8406235750202866`*^9}, {3.840623621623069*^9, 
+   3.84062362437003*^9}, {3.847436256668654*^9, 3.84743625673166*^9}, 
+   3.8474384857003183`*^9, 
+   3.9036865097421093`*^9},ExpressionUUID->"af7d65a4-4c6b-48b0-9b43-\
+533c5d969a48"],
+
+Cell[TextData[{
+ "State how well the linear model performed and explain your reasoning.\n",
+ StyleBox["Answer:",
+  FontWeight->"Bold",
+  FontColor->RGBColor[0., 0., 1.]]
+}], "Text",
+ CellChangeTimes->{{3.8406077677898483`*^9, 3.8406077805787115`*^9}, {
+   3.840607817148863*^9, 3.8406078233314943`*^9}, {3.840610140231086*^9, 
+   3.8406101687976065`*^9}, {3.8406102722419147`*^9, 3.840610312311409*^9}, {
+   3.840611453515895*^9, 3.8406115236670413`*^9}, {3.840611748504348*^9, 
+   3.8406117564028687`*^9}, {3.8406198485685296`*^9, 3.840619894007408*^9}, {
+   3.840620053998343*^9, 3.8406200554846*^9}, {3.840620190597066*^9, 
+   3.8406201990693045`*^9}, {3.840621651922863*^9, 3.8406216608175735`*^9}, {
+   3.840621727086878*^9, 3.840621727402832*^9}, 3.8406217713607407`*^9, {
+   3.8406236275151677`*^9, 3.840623627877078*^9}, 
+   3.8406236976897745`*^9},ExpressionUUID->"3feeb7a0-7517-467b-9c98-\
+0acdbf0cc5e8"],
+
+Cell["\<\
+
+\
+\>", "Text",
+ CellChangeTimes->{{3.8406077657661633`*^9, 
+  3.8406077988842287`*^9}},ExpressionUUID->"a7347ec0-eee8-4358-81d7-\
+fd5363f94bf6"],
+
+Cell["Code used to produce answer:", "Text",
+ CellChangeTimes->{{3.8406212671583977`*^9, 3.840621294907153*^9}, {
+  3.840623759650882*^9, 3.8406237597957306`*^9}},
+ FontWeight->"Bold",
+ FontColor->RGBColor[
+  0., 0., 1.],ExpressionUUID->"5d30430c-0e64-4d70-920b-742710df8fc2"],
+
+Cell[BoxData["\[IndentingNewLine]"], "Input",
+ CellChangeTimes->{
+  3.8406212739318576`*^9},ExpressionUUID->"3af426ab-4201-410c-9a3b-\
+78c723b2444f"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Question 5.\t",
+ StyleBox["[6 marks]",
+  FontWeight->"Bold",
+  FontColor:>Dynamic[
+    CurrentValue[{StyleHints, "ColorSet", "Display1"}]]]
+}], "Subsection",
+ CellChangeTimes->{{3.8087334418183565`*^9, 3.8087334484885187`*^9}, {
+   3.840623522414098*^9, 3.8406235750202866`*^9}, {3.8406236353898487`*^9, 
+   3.840623635489957*^9}, {3.847436259971686*^9, 3.8474362600185485`*^9}, 
+   3.8474384878682957`*^9, 3.903686574400346*^9, 3.9036866231671314`*^9, {
+   3.9681336910930347`*^9, 3.968133691575466*^9}, 3.968133809503234*^9, 
+   3.968134136057477*^9},ExpressionUUID->"66001ab6-0282-4bd5-a509-\
+0ddf2279a2df"],
+
+Cell[TextData[{
+ "Create new features (using the features described in Question 1)  to create \
+a non-linear model for this problem.\nAlso, state how you split the data up \
+for this model.\n",
+ StyleBox["Answer:",
+  FontWeight->"Bold",
+  FontColor->RGBColor[0., 0., 1.]]
+}], "Text",
+ CellChangeTimes->{{3.8406077677898483`*^9, 3.8406077805787115`*^9}, {
+   3.840607817148863*^9, 3.8406078233314943`*^9}, {3.840610140231086*^9, 
+   3.8406101687976065`*^9}, {3.8406102442374554`*^9, 3.840610249879386*^9}, {
+   3.8406104763159466`*^9, 3.840610476396017*^9}, {3.8406115539824295`*^9, 
+   3.840611557895995*^9}, {3.8406117070059996`*^9, 3.840611716240615*^9}, {
+   3.840611795037814*^9, 3.840611800689047*^9}, 3.840619913048134*^9, {
+   3.840619945716013*^9, 3.8406199457900066`*^9}, {3.8406200675701847`*^9, 
+   3.840620069959527*^9}, 3.840620205383778*^9, {3.840623638351478*^9, 
+   3.8406236387104607`*^9}, 3.840623699612303*^9, {3.9412712524564915`*^9, 
+   3.941271393750354*^9}, {3.941271450684078*^9, 3.9412715211750045`*^9}, {
+   3.96813379666777*^9, 3.9681337973066034`*^9}, {3.9681338728926716`*^9, 
+   3.9681339384197025`*^9}, 3.968133979435996*^9, {3.9681340230173388`*^9, 
+   3.9681340375069027`*^9}},ExpressionUUID->"3d18b8de-e649-4984-975b-\
+31b0fa4af033"],
+
+Cell["\<\
+
+\
+\>", "Text",
+ CellChangeTimes->{{3.8406077657661633`*^9, 
+  3.8406077988842287`*^9}},ExpressionUUID->"37183d16-35f8-46de-ab1c-\
+65c557015bad"],
+
+Cell["Code used to produce answer:", "Text",
+ CellChangeTimes->{{3.8406212671583977`*^9, 3.840621294907153*^9}, {
+  3.840623759650882*^9, 3.8406237597957306`*^9}},
+ FontWeight->"Bold",
+ FontColor->RGBColor[
+  0., 0., 1.],ExpressionUUID->"03ccbfaa-be21-43ed-8ebe-c94621f3ebf7"],
+
+Cell[BoxData["\[IndentingNewLine]"], "Input",
+ CellChangeTimes->{
+  3.8406212739318576`*^9},ExpressionUUID->"ba5fa257-3fc8-44fc-9e27-\
+10c34fd8ecd7"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Question 6.\t",
+ StyleBox["[4 marks]",
+  FontWeight->"Bold",
+  FontColor:>Dynamic[
+    CurrentValue[{StyleHints, "ColorSet", "Display1"}]]]
+}], "Subsection",
+ CellChangeTimes->{{3.8087334418183565`*^9, 3.8087334484885187`*^9}, {
+   3.840623522414098*^9, 3.8406235933922443`*^9}, {3.847436109074675*^9, 
+   3.847436109144519*^9}, 3.847438477876051*^9, {3.9036864675012693`*^9, 
+   3.9036864676160116`*^9}, 3.9036865670725236`*^9, {3.9681336165422163`*^9, 
+   3.968133617262168*^9}, 3.968133812183425*^9, {3.9681339480768404`*^9, 
+   3.9681339481583014`*^9}, 
+   3.9681341439213314`*^9},ExpressionUUID->"41ab5cf5-ca73-43c2-b590-\
+0ed885a312df"],
+
+Cell[TextData[{
+ "State in detail, the non-linear regression model used and the cost function \
+associated with it.\nThen modify the code used in Questions 2  and state the \
+values of the parameters found by the Gradient Decent method.\n",
+ StyleBox["Answer:",
+  FontWeight->"Bold",
+  FontColor->RGBColor[0., 0., 1.]]
+}], "Text",
+ CellChangeTimes->{{3.8406077677898483`*^9, 3.8406077805787115`*^9}, {
+   3.840607817148863*^9, 3.8406078233314943`*^9}, {3.840610140231086*^9, 
+   3.8406101687976065`*^9}, {3.840611410450673*^9, 3.8406114111372795`*^9}, {
+   3.8406118106191096`*^9, 3.8406118157377205`*^9}, {3.840619757198535*^9, 
+   3.840619781346617*^9}, {3.84062003764408*^9, 3.840620044774067*^9}, {
+   3.840620162977298*^9, 3.840620163057195*^9}, {3.840621198484002*^9, 
+   3.8406212288327556`*^9}, {3.840623598025297*^9, 3.8406235983732743`*^9}, 
+   3.840623693882882*^9, {3.90368616340644*^9, 3.9036861668461504`*^9}, {
+   3.9681336344822006`*^9, 3.9681336525041304`*^9}, {3.9681337774468565`*^9, 
+   3.968133778685382*^9}, 3.9681339453411174`*^9, 3.968134019896865*^9, {
+   3.968134054881916*^9, 
+   3.968134108891808*^9}},ExpressionUUID->"9222eae5-dd65-4acf-935b-\
+befba14e5693"],
+
+Cell["\<\
+
+\
+\>", "Text",
+ CellChangeTimes->{{3.8406077657661633`*^9, 
+  3.8406077988842287`*^9}},ExpressionUUID->"23efdc8b-4d57-48e5-9e9d-\
+67477b645860"],
+
+Cell["Code used to produce answer:", "Text",
+ CellChangeTimes->{{3.8406212671583977`*^9, 3.840621294907153*^9}, {
+  3.840623759650882*^9, 3.8406237597957306`*^9}},
+ FontWeight->"Bold",
+ FontColor->RGBColor[
+  0., 0., 1.],ExpressionUUID->"e264eb8a-e0c7-4243-b4da-948c488be65b"],
+
+Cell[BoxData["\[IndentingNewLine]"], "Input",
+ CellChangeTimes->{
+  3.8406212739318576`*^9},ExpressionUUID->"b464a654-45b3-4271-908a-\
+2c7d8655a2c5"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Question 7.\t",
+ StyleBox["[2 marks]",
+  FontWeight->"Bold",
+  FontColor:>Dynamic[
+    CurrentValue[{StyleHints, "ColorSet", "Display1"}]]]
+}], "Subsection",
+ CellChangeTimes->{{3.8087334418183565`*^9, 3.8087334484885187`*^9}, {
+   3.840623522414098*^9, 3.8406235750202866`*^9}, {3.8406236448548603`*^9, 
+   3.84062364760038*^9}, {3.847436262264079*^9, 3.8474362623262005`*^9}, 
+   3.8474384917637815`*^9, 3.9036865814405937`*^9, {3.9681339509556627`*^9, 
+   3.9681339510005026`*^9}},ExpressionUUID->"238bc303-73e4-448b-9cf1-\
+35e8f737332d"],
+
+Cell[TextData[{
+ "Using the non-linear Regression model created - predict the house prices \
+for the houses with IDs from 1461 to 2919.\n",
+ StyleBox["Answer:",
+  FontWeight->"Bold",
+  FontColor->RGBColor[0., 0., 1.]]
+}], "Text",
+ CellChangeTimes->{{3.8406077677898483`*^9, 3.8406077805787115`*^9}, {
+   3.840607817148863*^9, 3.8406078375778275`*^9}, {3.840610069305292*^9, 
+   3.840610134078578*^9}, {3.8406102145362997`*^9, 3.840610233887953*^9}, {
+   3.8406104711352663`*^9, 3.840610471195808*^9}, {3.840611544571762*^9, 
+   3.840611544609676*^9}, {3.840619931532981*^9, 3.8406199503229513`*^9}, {
+   3.840620074843757*^9, 3.8406200787394524`*^9}, {3.8406202082757907`*^9, 
+   3.840620208314365*^9}, {3.840623650920128*^9, 3.8406236512518005`*^9}, 
+   3.8406237017160354`*^9, {3.94127154751047*^9, 
+   3.9412715554045515`*^9}},ExpressionUUID->"d61e793d-2cc3-479b-af73-\
+d7cf46ea0fb1"],
+
+Cell["\<\
+
+\
+\>", "Text",
+ CellChangeTimes->{{3.8406077657661633`*^9, 
+  3.8406077988842287`*^9}},ExpressionUUID->"262510eb-dd2d-4a05-a9b5-\
+90c83b176bc6"],
+
+Cell["Code used to produce answer:", "Text",
+ CellChangeTimes->{{3.8406212671583977`*^9, 3.840621294907153*^9}, {
+  3.840623759650882*^9, 3.8406237597957306`*^9}},
+ FontWeight->"Bold",
+ FontColor->RGBColor[
+  0., 0., 1.],ExpressionUUID->"c3fca821-1976-4a13-bdad-dd3869d4e79c"],
+
+Cell[BoxData["\[IndentingNewLine]"], "Input",
+ CellChangeTimes->{
+  3.8406212739318576`*^9},ExpressionUUID->"b6b5388b-b46c-4ff6-82e2-\
+fc82f5c715d4"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Question 8.\t",
+ StyleBox["[6 marks]",
+  FontWeight->"Bold",
+  FontColor:>Dynamic[
+    CurrentValue[{StyleHints, "ColorSet", "Display1"}]]]
+}], "Subsection",
+ CellChangeTimes->{{3.8087334418183565`*^9, 3.8087334484885187`*^9}, {
+   3.840623522414098*^9, 3.8406235750202866`*^9}, {3.84062366035102*^9, 
+   3.8406236636747684`*^9}, {3.8474362656332645`*^9, 3.8474362656724253`*^9}, 
+   3.8474384957971125`*^9, {3.903686603551216*^9, 3.903686618911228*^9}, {
+   3.9681337054668045`*^9, 3.968133705562128*^9}, {3.96813395401865*^9, 
+   3.968133954125353*^9}},ExpressionUUID->"6a45d7a3-bf6e-46bc-b91a-\
+a1d8014e34f0"],
+
+Cell[TextData[{
+ "State how well the non-linear model performed (explaining your reasoning) \
+and compare it to the linear model.\n",
+ StyleBox["Answer:",
+  FontWeight->"Bold",
+  FontColor->RGBColor[0., 0., 1.]]
+}], "Text",
+ CellChangeTimes->{{3.8406077677898483`*^9, 3.8406077805787115`*^9}, {
+   3.840607817148863*^9, 3.8406078233314943`*^9}, {3.840610140231086*^9, 
+   3.8406101687976065`*^9}, {3.8406102722419147`*^9, 3.840610312311409*^9}, {
+   3.840610488985128*^9, 3.840610492835432*^9}, {3.8406115632144876`*^9, 
+   3.840611566794153*^9}, {3.8406117273500357`*^9, 3.840611735133881*^9}, {
+   3.840619975800766*^9, 3.8406199830796323`*^9}, {3.840620082988729*^9, 
+   3.84062008898042*^9}, {3.8406216718281384`*^9, 3.8406217115710506`*^9}, {
+   3.8406217827952547`*^9, 3.8406217834132743`*^9}, {3.840623666882721*^9, 
+   3.8406236672154307`*^9}, 3.840623703349069*^9, {3.9681341681695957`*^9, 
+   3.9681341956673574`*^9}},ExpressionUUID->"bbd39193-8b8d-46a4-b448-\
+cf6bbac66c47"],
+
+Cell["\<\
+
+\
+\>", "Text",
+ CellChangeTimes->{{3.8406077657661633`*^9, 3.8406077988842287`*^9}, {
+  3.8406214832776375`*^9, 
+  3.840621485297165*^9}},ExpressionUUID->"a353913f-d856-40c0-a522-\
+51f0838fc1de"],
+
+Cell["Code used to produce answer:", "Text",
+ CellChangeTimes->{{3.8406212671583977`*^9, 3.840621294907153*^9}, {
+  3.840623759650882*^9, 3.8406237597957306`*^9}},
+ FontWeight->"Bold",
+ FontColor->RGBColor[
+  0., 0., 1.],ExpressionUUID->"9af1e54b-3b2f-486e-8c0e-2bfa9a62276b"],
+
+Cell[BoxData["\[IndentingNewLine]"], "Input",
+ CellChangeTimes->{
+  3.8406212739318576`*^9, {3.8406214791280465`*^9, 
+   3.8406214818645544`*^9}},ExpressionUUID->"e8cf3e3a-d64b-4ef7-82aa-\
+489ecfc9e005"],
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", "\[IndentingNewLine]", 
+  "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{{3.8426943887700872`*^9, 
+  3.84269438901418*^9}},ExpressionUUID->"ba437f62-f75a-4bb8-8a2d-\
+6502fe07036a"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell["", "SlideShowNavigationBar",
+ CellTags->
+  "SlideShowHeader",ExpressionUUID->"195da66f-65d7-4d7d-bea2-75c680b6f3c1"]
+},
+ScreenStyleEnvironment->"Slideshow Working",
+WindowSize->{948., 460.125},
+WindowMargins->{{0.375, Automatic}, {Automatic, 0.375}},
+TaggingRules->{
+ "PresenterSettings" -> {
+   "ShowNavigationBar" -> True, "SlideBreakStyles" -> {}, "ShowSlideBreaks" -> 
+    True, "Theme" -> {
+     "ThemeName" -> "Default", "FontSetName" -> "Default", "ColorSetName" -> 
+      "Default"}, "LastColorUsed" -> Dynamic[
+      CurrentValue[{StyleHints, "ColorSet", "Display1"}]], 
+    "UserModifications" -> {{"Text", FontColor :> RGBColor[0., 0., 1.]}, {
+      "Subsection", FontColor :> RGBColor[0., 0., 1.]}, {
+      "Subsubsection", FontColor :> GrayLevel[0]}}, 
+    "WindowSize" -> {1141.2, 604.8}, "WindowMargins" -> {{0, 0}, {-30, 0}}, 
+    "Dialogs" -> {"PresenterControlsPalette" -> 0}}},
+Magnification:>0.5 Inherited,
+FrontEndVersion->"11.3 for Microsoft Windows (64-bit) (March 6, 2018)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> 
+     FrontEnd`FileName[{"PresenterTools"}, "Default.nb", CharacterEncoding -> 
+       "UTF-8"]]], 
+   Cell[
+    StyleData["Notebook", "Slideshow Presentation"], 
+    NotebookEventActions -> {ParentList, "HomeKeyDown" :> FrontEndTokenExecute[
+        NotebookObject[
+         FrontEndObject[
+          LinkObject["fnykg_shm", 3, 1]], 20], "ScrollPageFirst"], 
+      "LeftArrowKeyDown" :> FrontEndTokenExecute[
+        NotebookObject[
+         FrontEndObject[
+          LinkObject["fnykg_shm", 3, 1]], 20], "ScrollPagePrevious"], 
+      "RightArrowKeyDown" :> FrontEndTokenExecute[
+        NotebookObject[
+         FrontEndObject[
+          LinkObject["fnykg_shm", 3, 1]], 20], "ScrollPageNext"], 
+      "EndKeyDown" :> FrontEndTokenExecute[
+        NotebookObject[
+         FrontEndObject[
+          LinkObject["fnykg_shm", 3, 1]], 20], "ScrollPageLast"], 
+      "EscapeKeyDown" :> PresenterTools`EndPresentation[
+        NotebookObject[
+         FrontEndObject[
+          LinkObject["fnykg_shm", 3, 1]], 20], "KeyboardShortcut"]}]}, 
+  Visible -> False, FrontEndVersion -> 
+  "11.3 for Microsoft Windows (64-bit) (March 6, 2018)", StyleDefinitions -> 
+  "PrivateStylesheetFormatting.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "SlideShowHeader"->{
+  Cell[580, 22, 136, 2, 110, "SlideShowNavigationBar",ExpressionUUID->"c3ecb036-baa0-4ba9-95ea-67b58639db75",
+   CellTags->"SlideShowHeader"],
+  Cell[3263, 89, 122, 2, 110, "SlideShowNavigationBar",ExpressionUUID->"11336e2c-dc9b-4660-aace-ea635696dd61",
+   CellTags->"SlideShowHeader"],
+  Cell[35850, 871, 122, 2, 110, "SlideShowNavigationBar",ExpressionUUID->"195da66f-65d7-4d7d-bea2-75c680b6f3c1",
+   CellTags->"SlideShowHeader"]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"SlideShowHeader", 38242, 929}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 136, 2, 110, "SlideShowNavigationBar",ExpressionUUID->"c3ecb036-baa0-4ba9-95ea-67b58639db75",
+ CellTags->"SlideShowHeader"],
+Cell[CellGroupData[{
+Cell[741, 28, 550, 8, 61, "Chapter",ExpressionUUID->"c3ccad56-a13d-458a-8207-c25d1b06dbf3"],
+Cell[CellGroupData[{
+Cell[1316, 40, 1458, 27, 334, "Section",ExpressionUUID->"1f26cb97-b2cf-4766-bd76-ee25f39bec23"],
+Cell[2777, 69, 425, 13, 137, "Subsection",ExpressionUUID->"2befb1a6-84a8-4f1d-bcfd-3ecade2c63e5"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3263, 89, 122, 2, 110, "SlideShowNavigationBar",ExpressionUUID->"11336e2c-dc9b-4660-aace-ea635696dd61",
+ CellTags->"SlideShowHeader"],
+Cell[3388, 93, 719, 13, 87, "Title",ExpressionUUID->"b4e5e857-a858-487c-9039-fed57a0c9639"],
+Cell[4110, 108, 1690, 30, 87, "Text",ExpressionUUID->"70020fa7-b1d5-4909-a90e-9cfada77064e"],
+Cell[CellGroupData[{
+Cell[5825, 142, 755, 15, 37, "Subsection",ExpressionUUID->"213c3f72-a9d2-4b1d-beb9-797e9f934166"],
+Cell[6583, 159, 1243, 21, 54, "Text",ExpressionUUID->"49ded190-9585-4ec5-a8bc-2781348d9117"],
+Cell[7829, 182, 208, 7, 38, "Text",ExpressionUUID->"0ea8b630-bf97-450f-8062-332d9cd49426"],
+Cell[8040, 191, 276, 5, 21, "Text",ExpressionUUID->"5d9cb034-c48d-4308-835b-c8ed06677baf"],
+Cell[8319, 198, 149, 3, 40, "Input",ExpressionUUID->"cf99c650-ad89-4cf8-b184-ce2c2c210372"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8505, 206, 906, 17, 37, "Subsection",ExpressionUUID->"5ea9ab58-14cd-47b4-ab37-02284375969b"],
+Cell[9414, 225, 1473, 24, 54, "Text",ExpressionUUID->"64e92d9d-0637-45d2-88fc-417951aaebf0"],
+Cell[10890, 251, 208, 7, 38, "Text",ExpressionUUID->"47021a2d-2a3e-484e-bd10-ff8ce41848a7"],
+Cell[11101, 260, 276, 5, 21, "Text",ExpressionUUID->"0b16dead-e230-4422-9a18-114d3ce94eed"],
+Cell[11380, 267, 149, 3, 40, "Input",ExpressionUUID->"77bc48bf-8d88-48dc-b03e-a30be7eca813"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11566, 275, 859, 16, 37, "Subsection",ExpressionUUID->"d6bd9257-a808-4631-92b0-a4021f648644"],
+Cell[12428, 293, 1200, 20, 38, "Text",ExpressionUUID->"3ccfa633-1afe-4f6a-98cc-d8c53249db40"],
+Cell[13631, 315, 208, 7, 38, "Text",ExpressionUUID->"b1fb2533-13f4-42a4-a1f0-c00bf6fea910"],
+Cell[13842, 324, 276, 5, 21, "Text",ExpressionUUID->"49ebd0b9-1677-402b-b032-27e1b627650b"],
+Cell[14121, 331, 149, 3, 40, "Input",ExpressionUUID->"6e71f9a5-fa75-4f87-bb58-eccde611fe58"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[14307, 339, 571, 11, 87, "Title",ExpressionUUID->"557ee615-341a-4e65-bd36-acfa7921e665"],
+Cell[14881, 352, 334, 8, 38, "Text",ExpressionUUID->"5541f22e-6062-4e5e-97cb-15cd82027cbe"],
+Cell[15218, 362, 2259, 37, 203, "Text",ExpressionUUID->"c3453995-76c3-4e60-a7e1-b681e1eda9f7"],
+Cell[CellGroupData[{
+Cell[17502, 403, 587, 13, 37, "Subsection",ExpressionUUID->"c8d846ef-06ab-4158-ba71-8493883a6562"],
+Cell[18092, 418, 1245, 21, 71, "Text",ExpressionUUID->"a9464fb5-ad04-4829-9532-d294afe832c4"],
+Cell[19340, 441, 155, 6, 38, "Text",ExpressionUUID->"44107e52-a06b-4860-a993-377a7a919e2e"],
+Cell[19498, 449, 274, 5, 21, "Text",ExpressionUUID->"0f04cc29-7d41-4258-98d1-3db09eba00fb"],
+Cell[19775, 456, 149, 3, 40, "Input",ExpressionUUID->"9c603519-e05d-41b6-99f3-edd4fea4d55c"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[19961, 464, 557, 12, 37, "Subsection",ExpressionUUID->"13e2a78b-cda4-47d4-8d7d-3539878ca38c"],
+Cell[20521, 478, 982, 18, 38, "Text",ExpressionUUID->"da25c9ca-6778-4df5-837f-5ace775e23bc"],
+Cell[21506, 498, 155, 6, 38, "Text",ExpressionUUID->"20de9576-d17c-4273-90ea-9210aeb5c5e2"],
+Cell[21664, 506, 276, 5, 21, "Text",ExpressionUUID->"d28d6f27-233a-4587-8261-91bcbd635a6e"],
+Cell[21943, 513, 149, 3, 40, "Input",ExpressionUUID->"a7b8f52f-b50e-4933-8e5a-a60ef2f859f1"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[22129, 521, 510, 12, 37, "Subsection",ExpressionUUID->"78817d5b-be37-4844-92a1-3aff85e2da60"],
+Cell[22642, 535, 879, 16, 54, "Text",ExpressionUUID->"1c085178-a7a0-4047-8956-0a0a38ae4141"],
+Cell[23524, 553, 149, 3, 40, "Input",ExpressionUUID->"5b5d3a00-5e7b-4b90-ad3c-e5d910030b42"],
+Cell[23676, 558, 276, 5, 21, "Text",ExpressionUUID->"934ab32c-b12a-409e-95e2-823ecf291d91"],
+Cell[23955, 565, 149, 3, 9, "Input",ExpressionUUID->"643be401-fcf4-4e1d-a515-6e03f3a33f42"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[24141, 573, 504, 12, 9, "Subsection",ExpressionUUID->"af7d65a4-4c6b-48b0-9b43-533c5d969a48"],
+Cell[24648, 587, 914, 16, 10, "Text",ExpressionUUID->"3feeb7a0-7517-467b-9c98-0acdbf0cc5e8"],
+Cell[25565, 605, 155, 6, 10, "Text",ExpressionUUID->"a7347ec0-eee8-4358-81d7-fd5363f94bf6"],
+Cell[25723, 613, 276, 5, 5, "Text",ExpressionUUID->"5d30430c-0e64-4d70-920b-742710df8fc2"],
+Cell[26002, 620, 149, 3, 9, "Input",ExpressionUUID->"3af426ab-4201-410c-9a3b-78c723b2444f"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[26188, 628, 628, 13, 9, "Subsection",ExpressionUUID->"66001ab6-0282-4bd5-a509-0ddf2279a2df"],
+Cell[26819, 643, 1267, 21, 14, "Text",ExpressionUUID->"3d18b8de-e649-4984-975b-31b0fa4af033"],
+Cell[28089, 666, 155, 6, 10, "Text",ExpressionUUID->"37183d16-35f8-46de-ab1c-65c557015bad"],
+Cell[28247, 674, 276, 5, 5, "Text",ExpressionUUID->"03ccbfaa-be21-43ed-8ebe-c94621f3ebf7"],
+Cell[28526, 681, 149, 3, 9, "Input",ExpressionUUID->"ba5fa257-3fc8-44fc-9e27-10c34fd8ecd7"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[28712, 689, 660, 14, 9, "Subsection",ExpressionUUID->"41ab5cf5-ca73-43c2-b590-0ed885a312df"],
+Cell[29375, 705, 1187, 20, 14, "Text",ExpressionUUID->"9222eae5-dd65-4acf-935b-befba14e5693"],
+Cell[30565, 727, 155, 6, 10, "Text",ExpressionUUID->"23efdc8b-4d57-48e5-9e9d-67477b645860"],
+Cell[30723, 735, 276, 5, 5, "Text",ExpressionUUID->"e264eb8a-e0c7-4243-b4da-948c488be65b"],
+Cell[31002, 742, 149, 3, 9, "Input",ExpressionUUID->"b464a654-45b3-4271-908a-2c7d8655a2c5"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[31188, 750, 559, 12, 9, "Subsection",ExpressionUUID->"238bc303-73e4-448b-9cf1-35e8f737332d"],
+Cell[31750, 764, 887, 16, 10, "Text",ExpressionUUID->"d61e793d-2cc3-479b-af73-d7cf46ea0fb1"],
+Cell[32640, 782, 155, 6, 10, "Text",ExpressionUUID->"262510eb-dd2d-4a05-a9b5-90c83b176bc6"],
+Cell[32798, 790, 276, 5, 5, "Text",ExpressionUUID->"c3fca821-1976-4a13-bdad-dd3869d4e79c"],
+Cell[33077, 797, 149, 3, 9, "Input",ExpressionUUID->"b6b5388b-b46c-4ff6-82e2-fc82f5c715d4"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[33263, 805, 630, 13, 9, "Subsection",ExpressionUUID->"6a45d7a3-bf6e-46bc-b91a-a1d8014e34f0"],
+Cell[33896, 820, 985, 17, 10, "Text",ExpressionUUID->"bbd39193-8b8d-46a4-b448-cf6bbac66c47"],
+Cell[34884, 839, 206, 7, 10, "Text",ExpressionUUID->"a353913f-d856-40c0-a522-51f0838fc1de"],
+Cell[35093, 848, 276, 5, 5, "Text",ExpressionUUID->"9af1e54b-3b2f-486e-8c0e-2bfa9a62276b"],
+Cell[35372, 855, 203, 4, 9, "Input",ExpressionUUID->"e8cf3e3a-d64b-4ef7-82aa-489ecfc9e005"],
+Cell[35578, 861, 233, 5, 57, "Input",ExpressionUUID->"ba437f62-f75a-4bb8-8a2d-6502fe07036a"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[35850, 871, 122, 2, 110, "SlideShowNavigationBar",ExpressionUUID->"195da66f-65d7-4d7d-bea2-75c680b6f3c1",
+ CellTags->"SlideShowHeader"]
+}
+]
+*)
+
