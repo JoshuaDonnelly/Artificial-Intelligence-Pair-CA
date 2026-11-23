@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       154,          7]
-NotebookDataLength[   1357056,      25191]
-NotebookOptionsPosition[   1346697,      25036]
-NotebookOutlinePosition[   1347071,      25052]
-CellTagsIndexPosition[   1347028,      25049]
+NotebookDataLength[   1357206,      25196]
+NotebookOptionsPosition[   1346846,      25041]
+NotebookOutlinePosition[   1347220,      25057]
+CellTagsIndexPosition[   1347177,      25054]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -25020,16 +25020,21 @@ Cell[BoxData[
   "During evaluation of \
 In[149]:=",ExpressionUUID->"fde95e09-fe75-46b9-876c-cfcd881d6057"],
 
-Cell[BoxData[
+Cell[BoxData[{
  InterpretationBox[
   RowBox[{"\<\"Non-Linear R Squared: \"\>", "\[InvisibleSpace]", 
    RowBox[{"-", "0.2104710039278752`"}]}],
   SequenceForm["Non-Linear R Squared: ", -0.2104710039278752],
-  Editable->False]], "Print",
- CellChangeTimes->{4.004451950016696*^9, 4.0044521108124723`*^9},
- CellLabel->
-  "During evaluation of \
-In[149]:=",ExpressionUUID->"09d308ff-32be-4a6a-8503-2f801b5feebc"]
+  Editable->False], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"hi", " ", "josh"}], "*)"}]}]}], "Print",
+ GeneratedCell->False,
+ CellAutoOverwrite->False,
+ CellChangeTimes->{
+  4.004451950016696*^9, 4.0044521108124723`*^9, {4.004463835174908*^9, 
+   4.004463842235919*^9}},ExpressionUUID->"09d308ff-32be-4a6a-8503-\
+2f801b5feebc"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
@@ -25189,7 +25194,7 @@ Cell[1344734, 24979, 371, 9, 16, "Print",ExpressionUUID->"eab8d10b-5f02-4d8c-b89
 Cell[1345108, 24990, 383, 9, 16, "Print",ExpressionUUID->"c5c932fe-c2de-4fd7-b8c5-dafc53bcdc88"],
 Cell[1345494, 25001, 383, 9, 16, "Print",ExpressionUUID->"b980a39d-02d5-448c-b23a-e87c66f45c84"],
 Cell[1345880, 25012, 367, 8, 16, "Print",ExpressionUUID->"fde95e09-fe75-46b9-876c-cfcd881d6057"],
-Cell[1346250, 25022, 407, 9, 16, "Print",ExpressionUUID->"09d308ff-32be-4a6a-8503-2f801b5feebc"]
+Cell[1346250, 25022, 556, 14, 23, "Print",ExpressionUUID->"09d308ff-32be-4a6a-8503-2f801b5feebc"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
